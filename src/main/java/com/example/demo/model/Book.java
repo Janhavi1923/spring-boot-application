@@ -1,7 +1,12 @@
 package com.example.demo.model;
 
-public class Book {
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
+public class Book {
+    @Id
+private Long Id;
     private String title,isbn;
 
     public Book(String title, String isbn) {
@@ -23,5 +28,13 @@ public class Book {
 
     public void setIsbn(String isbn) {
         this.isbn = isbn;
+    }
+
+    public Long getId() {
+        return Id;
+    }
+
+    public void setId(Long id) {
+        Id = id;
     }
 }
